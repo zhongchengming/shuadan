@@ -1,0 +1,58 @@
+html{font-size:13.33333333vw}
+@media (min-width: 560px) {
+    html {
+        font-size: 54px;
+    }
+}
+html,body{
+    background-color: #70C1F7;
+    height: 100%;
+}
+.top-wrapper{
+    padding: 1rem .75rem 0;
+    background: #fff;
+}
+.top-wrapper img{
+    width: 6rem;
+    height: 5.45rem;
+    display: block;
+    margin: auto;
+}
+.tl{
+    background: #fff;
+    padding-bottom: .67rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.tl h1{
+    font-size: 0.36rem;
+    text-align: center;
+    line-height: .5rem;
+}
+.operBtns{
+    margin-top: 1.18rem;
+}
+.operBtns a{
+    font-size: .3rem;
+    display: block;
+    margin: 0 auto .25rem;
+    width: 3.4rem;
+    text-align: center;
+    background-color: #61B4EA;
+    color: #8bcffc;
+    height: .9rem;
+    line-height: .9rem;
+    border-radius: 3px;
+}
+.operBtns a img{
+    width: .48rem;
+    height: .48rem;
+    margin-right: .33rem;
+}
+.operBtns a.active{
+    background-color: transparent;
+    color: #fff;
+}
+.operBtns a.active.border::before{
+    border-radius: 4px;
+}

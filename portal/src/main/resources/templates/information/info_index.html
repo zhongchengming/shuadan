@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- 禁止移动端屏幕缩放，只对安卓有效 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- 删除默认的苹果工具栏和菜单栏 默认为no 设为yes则不显示工具栏和菜单栏-->
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <!-- 设置苹果工具栏的颜色 默认值为default 可以定为black和black-translucent（灰色半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 禁止将页面中的一连串数字识别为电话号码、并设置为手机可以拨打的一个连接 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <title>资讯</title>
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" th:href="@{/plugins/frozenui2.0/css/frozen.css}"/>
+    <link rel="stylesheet" th:href="@{/plugins/minirefresh/css/minirefresh.css}"/>
+    <link rel="stylesheet" th:href="@{/css/information/info.css}"/>
+
+</head>
+<body>
+<div class="info-block">
+    <div class="ui-tab">
+        <ul class="ui-tab-nav ui-border-b">
+            <li onclick="changeTab('16789');" class="current">最新政策</li>
+            <li onclick="changeTab('16788');">公示公告</li>
+            <li onclick="changeTab('16790');">政策解读</li>
+        </ul>
+        <div class="tab-content" id="tabContent">
+            <!--最新政策-->
+            <div class="minirefresh-wrap active" id="minirefresh1">
+                <div class="tab-content-item  minirefresh-scroll">
+                    <ul class="ui-list ui-list-pure ui-border-tb data-list" id="zxzc"></ul>
+                </div>
+            </div>
+            <!--公示公告-->
+            <div class="minirefresh-wrap" id="minirefresh2">
+                <div class="tab-content-item  minirefresh-scroll">
+                    <ul class="ui-list ui-list-pure ui-border-tb data-list" id="gsgg">
+                    </ul>
+                </div>
+            </div>
+            <!--政策解读-->
+            <div class="minirefresh-wrap" id="minirefresh3">
+                <div class="tab-content-item  minirefresh-scroll">
+                    <ul class="ui-list ui-list-pure ui-border-tb data-list" id="zcjd">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 详情 -->
+    <section id="details" class="details" style="display: none">
+        <div id="information" class="block-details">
+        </div>
+    </section>
+</div>
+<script th:src="@{/js/jquery-1.12.3.min.js}"></script>
+<script th:src="@{/plugins/minirefresh/js/minirefresh.js}"></script>
+<script th:src="@{/plugins/minirefresh/js/common.js}"></script>
+<script th:src="@{/js/information/index.js}"></script>
+</body>
+</html>
+</html>

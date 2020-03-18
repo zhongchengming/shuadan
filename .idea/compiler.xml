@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="support" />
+        <module name="resgisterservice" />
+        <module name="portal" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="registerService" target="1.8" />
+      <module name="registerServicec" target="1.8" />
+      <module name="supply" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="EclipseCompilerSettings">
+    <option name="PROCEED_ON_ERROR" value="false" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="portal" options="-parameters" />
+      <module name="registerService" options="-parameters" />
+      <module name="registerServicec" options="-parameters" />
+      <module name="resgisterservice" options="-parameters" />
+      <module name="shuadan" options="" />
+      <module name="supply" options="-parameters" />
+      <module name="support" options="-parameters" />
+    </option>
+  </component>
+</project>

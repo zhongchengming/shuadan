@@ -1,0 +1,10 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+server:
+  port: 8082
+spring:
+  application:
+    name: support
+#    服务提供者 向Server发起注册请求 ，另外还有一个服务消费者，就是相当于这个消费者会请求服务提供者

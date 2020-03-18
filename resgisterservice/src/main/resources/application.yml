@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      服务注册中心 相当于报警系统平台，其他服务是通过他进行注册的

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- 禁止移动端屏幕缩放，只对安卓有效 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- 删除默认的苹果工具栏和菜单栏 默认为no 设为yes则不显示工具栏和菜单栏-->
+    <meta name="apple-mobile-web-app-capable" content="no"/>
+    <!-- 设置苹果工具栏的颜色 默认值为default 可以定为black和black-translucent（灰色半透明）-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 禁止将页面中的一连串数字识别为电话号码、并设置为手机可以拨打的一个连接 -->
+    <meta name="format-detection" content="telephone=no"/>
+    <title>资讯详情</title>
+    <link rel="stylesheet" th:href="@{/plugins/frozenui2.0/css/frozen.css}">
+    <link rel="stylesheet" th:href="@{/css/information/info.css}">
+</head>
+
+<body>
+    <header class="ui-header ui-header-positive ui-border-b">
+        <i class="ui-icon-return" onclick="history.back()"></i><h1>资讯详情</h1>
+    </header>
+    <section id="details" class="ui-container">
+        <div class="block-details">
+            <div class="title ui-border-b">{{detailsInfo.title}}</div>
+            <div class="main">
+                <div class="main-head"> 
+                    <span>发布时间：{{detailsInfo.date}}</span> <span>阅读：{{detailsInfo.look}}</span>
+                </div>
+                <div class="content ui-txt-justify">{{detailsInfo.text}}</div>
+            </div>
+        </div>
+    </section>
+    <script th:src="@{/js/vue.js}"></script>
+    <script class="demo-script">
+        new Vue({
+                el: '#details',
+                data: {
+                    detailsInfo:{
+                        title:'福建省人力资源和社会保障厅关于开展企业职业技能等级认定试点工作的通知',
+                        date: '2019-09-27 15:42',
+                        look: '85',
+                        text: `为贯彻落实中共中央、国务院《新时期产业工人队伍建设改革方案》、《关于分类推进人才评价机制改革的指导意见》
+                        和《福建省人民政府关于推行终身职业技能培训制度的实施意见》(闽政〔2018〕26号)、省委办公厅省政府办公厅《关于提高技术工人待遇的实施意见》
+                        (闽委办发〔2019〕1号)精神,根据人力资源社会保障部办公厅《关于扩大企业职业技能等级认定试点工作的通知》(人社厅函﹝2019﹞83号)要求,
+                        为进一步推进技能人才评价工作,经研究,决定在我省开展企业职业技能等级认定试点工作。现就有关事项通知如下:
+                        (一)试点企业。一是按照自愿申报、择优遴选原则,通过公开征集、各地人社部门推荐等方式,选择具有行业代表性的大型企业。二是已在人力资源和社会保障部(以下简称“人社部”)完成职业技能等级认定试点单位备案的中央企业在闽分支机构。原则上每个设区市推荐1-2家企业做为试点企业。
+                        (二)试点对象。本企业签订劳动合同且缴纳社保满6个月的在岗职工或在企业工作1年以上的在岗劳务派遣人员。
+                        (三)试点职业(工种)。企业自主评价的职业(工种)为《中华人民共和国职业分类大典(2015年版)》中收录的技能类职业(工种)和人力资源社会保障部公布的新职业。准入类职业资格不纳入试点范围。`
+                    }
+                },
+            })
+            
+    </script>
+</body>
+
+</html>
