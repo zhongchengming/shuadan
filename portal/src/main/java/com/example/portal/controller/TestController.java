@@ -7,17 +7,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("portal")
-public class MainControler {
+@RequestMapping("portal/test")
+public class TestController {
     @Autowired
     MainService mainService;
+    @RequestMapping("/getData")
+    public String test (@RequestParam String name){
+        String value = mainService.hiService("发送：我是portal");
+        return value;
+    }
     @RequestMapping("index")
-    public String index(){
+    public String view(){
         return "portal/index";
     }
-    @RequestMapping("/")
-    public String toindex(){
-        return "portal/index";
+    @RequestMapping("agreement")
+    public String agreement(){
+        return "agreement";
     }
 
 }
