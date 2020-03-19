@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+    <!--oracle jar路径-->
+    <classPathEntry location="C:\Users\LeifChen\mavennx\Repository\mysql\mysql-connector-java\5.1.40\mysql-connector-java-5.1.40.jar" />
+    <context id="context1" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://47.99.176.45:3306/shuadanDB"
+                        userId="user02"
+                        password="Aabcd123e45!@#" />
+        <!--model包名-->
+        <javaModelGenerator targetPackage="main.java.com.example.support.bean" targetProject="src" />
+        <!--xml包名-->
+        <sqlMapGenerator targetPackage="main.resources.mapping" targetProject="src" />
+        <!--接口包名-->
+        <javaClientGenerator targetPackage="main.java.com.example.support.mapping" targetProject="src" type="XMLMAPPER" />
+
+        <table  tableName="ACCOUNT" domainObjectName="Account" enableCountByExample="false" enableUpdateByExample="false"
+                enableDeleteByExample="false"
+                enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table  tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"
+                enableDeleteByExample="false"
+                enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+
+    </context>
+</generatorConfiguration>
