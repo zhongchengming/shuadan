@@ -2,9 +2,10 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration >
     <!--oracle jar路径-->
-    <classPathEntry location="C:\Users\LeifChen\mavennx\Repository\mysql\mysql-connector-java\5.1.40\mysql-connector-java-5.1.40.jar" />
+    <classPathEntry location="/Users/zhongchengming/mavennx/Repository/mysql/mysql-connector-java/8.0.11/mysql-connector-java-8.0.11.jar" />
+<!--    <classPathEntry location="C:\Users\LeifChen\mavennx\Repository\mysql\mysql-connector-java\5.1.40\mysql-connector-java-5.1.40.jar" />-->
     <context id="context1" targetRuntime="MyBatis3">
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://47.99.176.45:3306/shuadanDB"
                         userId="user02"
                         password="Aabcd123e45!@#" />
