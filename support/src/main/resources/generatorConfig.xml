@@ -10,11 +10,11 @@
                         userId="user02"
                         password="Aabcd123e45!@#" />
         <!--model包名-->
-        <javaModelGenerator targetPackage="main.java.com.example.support.bean" targetProject="src" />
+        <javaModelGenerator targetPackage="com.example.support.bean" targetProject="src/main/java" />
         <!--xml包名-->
         <sqlMapGenerator targetPackage="main.resources.mapping" targetProject="src" />
         <!--接口包名-->
-        <javaClientGenerator targetPackage="main.java.com.example.support.mapping" targetProject="src" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.example.support.mapping" targetProject="src/main/java" type="XMLMAPPER" />
 
         <table  tableName="ACCOUNT" domainObjectName="Account" enableCountByExample="false" enableUpdateByExample="false"
                 enableDeleteByExample="false"
