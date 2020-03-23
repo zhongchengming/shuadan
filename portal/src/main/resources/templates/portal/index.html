@@ -8,31 +8,73 @@
     <link rel="stylesheet" type="text/css" th:href="@{/plugins/layui/css/layui.css}"/>
 </head>
 <body>
-<div id="head">
-    <div class="head-item">
-        <div class="head-item-label" >淘淘</div>
+<div class="fhead">
+    <div style="width: 100%;background-color: rgb(33,33,33);height: 60px">
+        <div id="head-item-f1">
+            <div style="float: left;width: 50%;height: 100%">
+
+            </div>
+            <div style="float:right;width: 50%;height: 100%">
+                <div style="margin-left: 200px">
+                    <ul class="layui-nav" lay-filter="">
+                        <li class="layui-nav-item">
+                            <a href="javascript:;">zhongchengming</a>
+                            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                                <dd><a href="">移动模块</a></dd>
+                                <dd><a href="">后台模版</a></dd>
+                                <dd><a href="">电商平台</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;">我是商家</a>
+                            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                                <dd><a href="">发布任务</a></dd>
+                                <dd><a href="">已发任务</a></dd>
+                                <dd><a href="">绑定掌柜</a></dd>
+                                <dd><a href="">我的申诉</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="javascript:;">我是接手</a>
+                            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                                <dd><a href="">移动模块</a></dd>
+                                <dd><a href="">后台模版</a></dd>
+                                <dd><a href="">电商平台</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item"><a href="">社区</a></li>
+                    </ul>
+                </div>
+            </div>
     </div>
-    <div class="head-item" style="width: 50px">
-     <div class="head-item-label" style="color: black!important;">淘淘</div>
     </div>
-    <div class="head-item">
-        <div class="head-item-label">淘宝天猫</div>
-    </div>
-    <div class="head-item">
-        <div class="head-item-label">阿里巴巴</div>
-    </div>
-    <div class="head-item">
-        <div class="head-item-label">拼多多</div>
-    </div>
-    <div  style="float: right;width: 400px;height: 120px">
-        <div style="float: left;margin-top: 33px">
-            <button type="button" id="login-bt">登录</button>
+    <div id="head-item-f">
+        <div class="head-item">
+            <div class="head-item-label" >淘淘</div>
         </div>
-        <div style="float: left;margin-top: 33px;">
-            <button style="width: 120px;height: 40px;font-size: 17px" class="layui-btn layui-btn-normal">免费注册</button>
+        <div class="head-item" style="width: 50px">
+            <div class="head-item-label" style="color: #0C0C0C!important;">淘淘</div>
+        </div>
+        <div class="head-item">
+            <div class="head-item-label">淘宝天猫</div>
+        </div>
+        <div class="head-item">
+            <div class="head-item-label">阿里巴巴</div>
+        </div>
+        <div class="head-item">
+            <div class="head-item-label">拼多多</div>
+        </div>
+        <div  style="float: right;width: 400px;height: 100px;">
+            <div style="float: left;margin-top: 33px">
+                <button type="button" id="login-bt">登录</button>
+            </div>
+            <div style="float: left;margin-top: 33px;">
+                <button style="width: 120px;height: 40px;font-size: 17px" class="layui-btn layui-btn-normal">免费注册</button>
+            </div>
         </div>
     </div>
 </div>
+
 <div id="content">
 
 </div>
@@ -41,25 +83,40 @@
 <script th:src="@{/plugins/layui/layui.all.js}"></script>
 </body>
 <style>
-    #head{
+    .fhead{
         width: 100%;
-        height: 120px;
-        background-color: #0C0C0C;
+        height: 150px;
         position: fixed;
+        width: 100%;
+        background-color: #0C0C0C;
+    }
+    #head-item-f1{
+        width: 1500px;
+        height: 60px;
+        margin: 0px auto;
+
+    }
+    #head-item-f{
+        width: 1500px;
+        height: 90px;
+        background-color: #0C0C0C;
+        margin: 0px auto;
     }
     #content{
         width: 100%;
         height: 900px;
-        background-color: #00F7DE;
+        color: rgb(0,153,255);
     }
     .head-item{
-       float: left;
+        float: left;
         width: 15%;
         height: 100px;
         display: inline-block;
         text-align: center;
         align-items: center;
         align-content: center;
+
+
     }
     .head-item-label{
         color: white;
@@ -67,11 +124,16 @@
         font-size: 21px;
         margin-top: 40px;
         top: 40px;
+        cursor: pointer;
+    }
+    .head-item-label:hover{
+        color: rgb(0,153,255);
+
     }
     #login-bt:hover{
-        color: #1e9fff;
+        color: rgb(0,153,255);
         font-size: 17px;
-        background-color: black;
+        background-color: #0C0C0C;
         width: 100px;
         height: 40px;
         border-style: none;
@@ -79,14 +141,34 @@
         font-weight: bold
     }
     #login-bt{
-       color: white;
+        color: white;
         font-size: 17px;
-        background-color: black;
+        background-color: #0C0C0C;
         width: 100px;
         height: 40px;
         border-style: none;
         border-bottom-width: 0px;
-        font-weight: bold
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .layui-nav {
+        position: relative;
+        padding: 0 20px;
+        background-color: rgb(33,33,33);
+        color: #fff;
+        border-radius: 2px;
+        font-size: 0;
+        box-sizing: border-box;
+    }
+    .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 5px;
+        background-color: rgb(0,153,255);
+        transition: all .2s;
+        -webkit-transition: all .2s;
     }
     body{
         margin: 0;
